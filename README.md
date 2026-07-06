@@ -80,7 +80,3 @@ key:
 
 Then `openssl dgst -sha256 -verify <key> -signature SHA256SUMS.sig SHA256SUMS`
 and `shasum -a 256 -c SHA256SUMS`. If any step fails: stop, do not install.
-
-## License
-
-Proprietary; distributed as compiled bundles for convenience.
