@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation
+    url: https://etiquekit.com/docs/
+    about: Install, quickstart, concepts, CLI reference
+  - name: Agent quickstart (llms.txt)
+    url: https://etiquekit.com/llms.txt
+    about: Machine-readable onboarding for AI agents
