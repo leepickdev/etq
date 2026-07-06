@@ -5,6 +5,14 @@ attached to the matching GitHub Release and served from
 https://etiquekit.com/releases/; every set is covered by a signed
 `SHA256SUMS` (see SECURITY.md).
 
+## 1.0.6 — 2026-07-06
+
+- Newcomer-pilot documentation fixes: the README quickstart is now runnable
+  verbatim (real profile seat names), README and QuickStart share one
+  canonical order, the completion gate (receipt → post → return check) is
+  documented, and the agent guide addresses installed-package consumers.
+- npm package metadata now links this repository (`repository`/`bugs`).
+
 ## 1.0.5 — 2026-07-06
 
 - Vocabulary sweep across shipped docs and CLI help text: `journal`,
