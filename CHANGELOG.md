@@ -5,6 +5,29 @@ attached to the matching GitHub Release and served from
 https://etiquekit.com/releases/; every set is covered by a signed
 `SHA256SUMS` (see SECURITY.md).
 
+## 1.0.9 — 2026-07-06
+
+- Completion gate integrity: `return check` now verifies the receipt the
+  task envelope names — a posted packet with the named receipt absent is
+  `missing_return`, with the path stated. The deletion test is encoded in
+  the contract suite.
+- `doctor` warns on a missing git repository (with the exact fix command)
+  and on git below the documented 2.40 minimum.
+
+## 1.0.8 — 2026-07-06 (superseded)
+
+- Deviation-survivable CLI: one-line errors (no stack/bundle dumps),
+  unenrolled-seat errors list enrolled seats, bun preflight shims with an
+  install hint, `--help` exits 0, `post` listed in main help.
+- Superseded same-day by 1.0.9, which fixes a completion-gate integrity
+  issue found by the pre-publish evaluation; prefer >=1.0.9.
+
+## 1.0.7 — 2026-07-06
+
+- First-run experience: bare invocation prints a compact entry card;
+  generated onboarding references only real commands; internal
+  authoring docs removed from the package.
+
 ## 1.0.6 — 2026-07-06
 
 - Newcomer-pilot documentation fixes: the README quickstart is now runnable
