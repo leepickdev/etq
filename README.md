@@ -12,11 +12,13 @@ unit of work a *task envelope*, each completion a *receipt*, and each merge a
 
 Docs: https://etiquekit.com/docs/ · Agents start at: https://etiquekit.com/llms.txt
 
-> This repository is Etiquette's public home: issue tracking, changelog,
-> security policy, and signed release artifacts. The source is private while
-> the pilot program runs — the same model as other proprietary CLIs with
-> public GitHub presences. Releases here carry the identical signed bytes
-> served by npm and etiquekit.com.
+> This repository is Etiquette's public home: documentation, issue tracking,
+> changelog, security policy, and signed release artifacts. Etiquette is
+> Apache-2.0 licensed; the published npm package ships its full TypeScript
+> source, and this repository is becoming the curated public source home.
+> During the pilot, contribution intake is maintainer-directed (unsolicited
+> PRs are not accepted) and issue responses are best-effort. Releases here
+> carry the identical signed bytes served by npm and etiquekit.com.
 
 ## Install
 
