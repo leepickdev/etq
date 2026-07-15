@@ -10,8 +10,10 @@ runtime.
 seat -> task envelope -> session -> execution -> receipt -> promotion gate
 ```
 
-Core records, validates, gates, and dispatches. Exec runs and returns evidence.
-Full remembers, consolidates, marinates, and projects.
+`@etiquekit/core` defines the public contract: schemas, state machines,
+authority/refusal rules, plane profiles, and conformance. `@etiquekit/etq` is
+the thin local execution plane that consumes that contract, runs local workflow
+commands, and returns evidence. Managed or hosted planes are separate consumers.
 
 ## Seat
 

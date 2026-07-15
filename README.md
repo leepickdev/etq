@@ -14,16 +14,29 @@ Docs: https://etiquekit.com/docs/ · Agents start at: https://etiquekit.com/llms
 
 > This repository is Etiquette's public home: documentation, issue tracking,
 > changelog, security policy, and signed release artifacts. Etiquette is
-> Apache-2.0 licensed; the published npm package ships its full TypeScript
-> source, and this repository is becoming the curated public source home.
+> Apache-2.0 licensed. The published npm package is the thin local execution
+> plane and consumes the public `@etiquekit/core` contract.
 > During the pilot, contribution intake is maintainer-directed (unsolicited
 > PRs are not accepted) and issue responses are best-effort. Releases here
 > carry the identical signed bytes served by npm and etiquekit.com.
 
+## Package split
+
+Etiquette is shipped as a small open core plus execution planes:
+
+| Package / repo | Role |
+| --- | --- |
+| [`@etiquekit/core`](https://www.npmjs.com/package/@etiquekit/core) · [`leepickdev/etiquekit-core`](https://github.com/leepickdev/etiquekit-core) | Public open governance contract: schemas, pure state machines, authority/refusal rules, plane profiles, and conformance. |
+| [`@etiquekit/etq`](https://www.npmjs.com/package/@etiquekit/etq) · [`leepickdev/etq`](https://github.com/leepickdev/etq) | Thin local execution plane: CLI, git journal, worktree/session ergonomics, local evidence return, and developer-facing docs. It consumes `@etiquekit/core`. |
+| `remote-etq` | Private managed execution plane: API, sequencer, workers, tenancy, and hard-stop enforcement. |
+
+The open reference is the core contract plus sample/conformance surfaces. `etq`
+is the production local plane that dogfoods that contract.
+
 ## Install
 
 ```sh
-npm install -g @etiquekit/etq        # etq, etiquette, etiquette-core on PATH
+npm install -g @etiquekit/etq        # local exec plane; installs @etiquekit/core
 curl -fsSL https://etiquekit.com/install.sh | sh   # or: native installer
 ```
 
@@ -69,16 +82,3 @@ your repo. Nothing leaves your machine: no backend, no telemetry, no account.
 Commands can initialize, check, record evidence, and project read models.
 They **do not** grant authority, merge, close work, publish, or promote truth.
 Execution returns evidence; it never mints authority.
-
-## Verify releases
-
-The release signing public key has this SHA-256 fingerprint — cross-check it
-against the copy at https://etiquekit.com/docs/ before trusting a downloaded
-key:
-
-```
-917fbced1d6a82897ec3441a1d12947803ca4d42a6bc63d3412dee8bf8c3ce31
-```
-
-Then `openssl dgst -sha256 -verify <key> -signature SHA256SUMS.sig SHA256SUMS`
-and `shasum -a 256 -c SHA256SUMS`. If any step fails: stop, do not install.

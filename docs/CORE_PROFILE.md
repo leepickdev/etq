@@ -1,7 +1,15 @@
 # Etiquette Core Profile
 
-Etiquette Core is the bare-bones governance flavor for senior engineers who
-want the original promise without the managed runtime surface.
+This file describes the `etiquette-core` CLI profile inside `@etiquekit/etq`.
+It is not the same thing as the public npm package `@etiquekit/core`.
+
+`@etiquekit/core` is the open governance contract: schemas, pure state machines,
+authority/refusal rules, plane profiles, and conformance. `@etiquekit/etq` is
+the thin local execution plane that consumes it.
+
+The `etiquette-core` CLI profile is the bare-bones local governance flavor for
+senior engineers who want the original promise without the managed runtime
+surface.
 
 Core includes:
 
@@ -25,7 +33,7 @@ Core excludes by default:
 
 ## Primitive Map
 
-Core records, validates, gates, and dispatches:
+The local core profile records, validates, gates, and dispatches:
 
 | Layer | Core primitive |
 | --- | --- |
@@ -35,9 +43,9 @@ Core records, validates, gates, and dispatches:
 | Execute | local shell, local worktree, local runner; authority-false |
 | Act | dispatch advice, receipt return, next-owner routing |
 
-Full remembers, consolidates, marinates, and projects. Memory stores,
-consolidation rollups, marination modules, hosted portals, secure screening,
-remote runtime cells, and sharded drains belong there unless explicitly enabled.
+Higher-level planes may consolidate and project. Memory stores, consolidation
+rollups, hosted portals, secure screening, remote runtime cells, and sharded
+drains belong outside this profile unless explicitly enabled.
 
 Use:
 

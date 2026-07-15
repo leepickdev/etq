@@ -10,7 +10,8 @@ The published package:
 
 ```sh
 npm install -g @etiquekit/etq
-# or project-local: npm install @etiquekit/etq && alias etq=./node_modules/.bin/etq
+# or project-local: npm install @etiquekit/etq
+# @etiquekit/core is installed as the local plane's public contract dependency
 etq --help
 ```
 
