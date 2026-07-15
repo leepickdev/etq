@@ -68,12 +68,12 @@ Create checkable dispatch examples, then run the generated command:
 
 ```sh
 "$ETQ" dispatch scaffold --project "$PWD" --task-id APP-001 --seat impl-seat
-"$ETQ" dispatch check --project "$PWD" \
-  --mode docs/work/dispatch/APP-001/mode.yaml \
-  --task docs/work/dispatch/APP-001/task.yaml \
-  --sandbox-receipt docs/work/dispatch/APP-001/receipt.yaml \
-  --state docs/work/dispatch/APP-001/seat-readiness.json
+"$ETQ" dispatch check --project "$PWD" --task-id APP-001 --seat impl-seat
 ```
+
+`dispatch check` derives the scaffold paths from `--task-id`, prints the
+resolved path map it used, and accepts explicit path flags only when you need
+to override the convention.
 
 `dispatch record` writes local metadata and receipt refs; it does not merge,
 close, publish, or grant.
